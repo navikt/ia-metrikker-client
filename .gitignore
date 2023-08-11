@@ -1,0 +1,18 @@
+# Dependency directories
+node_modules/
+
+# TypeScript output directory
+dist/
+
+# IDE - IntelliJ
+.idea/
+*.iml
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Test results
+/coverage.data
+/coverage/
+

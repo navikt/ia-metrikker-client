@@ -35,8 +35,9 @@ export const sendIaMetrikk = async (
     type: metrikkType,
     kilde: metrikkKilde,
   };
+
   if (!erIaMetrikkSendtForBedrift(orgnr)) {
-    const fetchResponse = await fetch(`${url}`, {
+    const response = await fetch(`${url}`, {
       method: "POST",
       credentials: "include",
       body: JSON.stringify(metrikk),
@@ -45,8 +46,8 @@ export const sendIaMetrikk = async (
         "Content-Type": "application/json",
       },
     });
-    const data = await fetchResponse.json();
-    if (data.status === "created") {
+
+    if (response.status === 201) {
       sendteMetrikker.push({ orgnr: orgnr });
     }
   }

@@ -1,5 +1,5 @@
 type Virksomhet = { orgnr: string };
-export const sendteMetrikker: Virksomhet[] = [];
+const sendteMetrikker: Virksomhet[] = [];
 
 interface Metrikk {
   orgnr: string;
@@ -54,7 +54,7 @@ export const sendIaMetrikk = async (
   return Promise.resolve(sendteMetrikker);
 };
 
-export const erIaMetrikkSendtForBedrift = (orgnr: string): boolean => {
+const erIaMetrikkSendtForBedrift = (orgnr: string): boolean => {
   return sendteMetrikker.some((virksomhet) => virksomhet.orgnr === orgnr);
 };
 

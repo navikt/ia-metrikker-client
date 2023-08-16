@@ -3,6 +3,8 @@
   "version": "1.4.0",
   "description": "client for sending IA metrics",
   "main": "dist/index.ts",
+  "type": "module",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write 'src/**/*.ts'",
@@ -16,12 +18,12 @@
     "type": "git",
     "url": "git+https://github.com/navikt/ia-metrikker-client.git"
   },
-  "author": "",
+  "author": "NAV",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/navikt/ia-metrikker-client/issues"
   },
-  "homepage": "https://github.com/navikt/ia-metrikker-client#readme",
+  "homepage": "https://github.com/navikt/ia-metrikker-client",
   "devDependencies": {
     "@navikt/eslint-config-teamia": "^1.0.5",
     "@typescript-eslint/eslint-plugin": "^5.59.5",

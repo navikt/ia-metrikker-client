@@ -7,7 +7,7 @@
     "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "lib": [
       "ES2021",
       "DOM"

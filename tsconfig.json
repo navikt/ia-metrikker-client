@@ -7,17 +7,9 @@
     "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": false,
-    "lib": [
-      "ES2021",
-      "DOM"
-    ]
+    "sourceMap": true,
+    "lib": ["ES2021", "DOM"]
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
-

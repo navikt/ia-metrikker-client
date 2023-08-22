@@ -1,15 +1,7 @@
-const {
+export {
   sendIaMetrikk,
   MetrikkType,
   MetrikkKilde,
   iaMetrikkerApiPath,
   getIaMetrikkerApiUrl,
-} = require("./client.js");
-
-module.exports = {
-  sendIaMetrikk,
-  MetrikkType,
-  MetrikkKilde,
-  iaMetrikkerApiPath,
-  getIaMetrikkerApiUrl,
-};
+} from "./client.js";

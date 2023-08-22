@@ -24,7 +24,7 @@ export enum MetrikkKilde {
   FOREBYGGINGSPLAN = "FOREBYGGINGSPLAN",
 }
 
-const sendIaMetrikk = async (
+export const sendIaMetrikk = async (
   orgnr: string,
   metrikkType: MetrikkType,
   metrikkKilde: MetrikkKilde,
@@ -58,15 +58,7 @@ const erIaMetrikkSendtForBedrift = (orgnr: string): boolean => {
   return sendteMetrikker.some((virksomhet) => virksomhet.orgnr === orgnr);
 };
 
-const iaMetrikkerApiPath = `/ia-tjenester-metrikker/innlogget/mottatt-iatjeneste`;
-const getIaMetrikkerApiUrl = (basePath: string): string => {
+export const iaMetrikkerApiPath = `/ia-tjenester-metrikker/innlogget/mottatt-iatjeneste`;
+export const getIaMetrikkerApiUrl = (basePath: string): string => {
   return `${basePath}${iaMetrikkerApiPath}`;
-};
-
-module.exports = {
-  sendIaMetrikk,
-  MetrikkType,
-  MetrikkKilde,
-  iaMetrikkerApiPath,
-  getIaMetrikkerApiUrl,
 };

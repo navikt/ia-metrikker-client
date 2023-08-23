@@ -50,11 +50,7 @@ export const sendIaMetrikk = async (
     if (response.status === 201) {
       sendteMetrikker.push({ orgnr: orgnr });
     } else {
-      return Promise.reject(
-        new Error(
-          `Kunne ikke sende metrikk til ${url}. Status: ${response.status}`
-        )
-      );
+      return Promise.reject(response);
     }
   }
   return Promise.resolve(sendteMetrikker);

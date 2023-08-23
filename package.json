@@ -1,6 +1,6 @@
 {
   "name": "@navikt/ia-metrikker-client",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "client for sending IA metrics",
   "main": "./build/cjs/index.js",
   "module": "./build/esm/index.js",

@@ -47,7 +47,7 @@ export const sendIaMetrikk = async (
       },
     });
 
-    if (response.status === 201) {
+    if (response.ok) {
       sendteMetrikker.push({ orgnr: orgnr });
     } else {
       return Promise.reject(response);

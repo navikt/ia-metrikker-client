@@ -36,28 +36,23 @@ export const sendIaMetrikk = async (
     kilde: metrikkKilde,
   };
 
-  if (!erIaMetrikkSendtForBedrift(orgnr)) {
-    const response = await fetch(`${url}`, {
-      method: "POST",
-      credentials: "include",
-      body: JSON.stringify(metrikk),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    });
+  const response = await fetch(`${url}`, {
+    method: "POST",
+    credentials: "include",
+    body: JSON.stringify(metrikk),
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  });
 
-    if (response.ok) {
-      sendteMetrikker.push({ orgnr: orgnr });
-    } else {
-      return Promise.reject(response);
-    }
+  if (response.ok) {
+    sendteMetrikker.push({ orgnr: orgnr });
+  } else {
+    return Promise.reject(response);
   }
-  return Promise.resolve(sendteMetrikker);
-};
 
-const erIaMetrikkSendtForBedrift = (orgnr: string): boolean => {
-  return sendteMetrikker.some((virksomhet) => virksomhet.orgnr === orgnr);
+  return Promise.resolve(sendteMetrikker);
 };
 
 export const iaMetrikkerApiPath = `/ia-tjenester-metrikker/innlogget/mottatt-iatjeneste`;
